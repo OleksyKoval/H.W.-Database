@@ -1,0 +1,5 @@
+select cars.*
+from cars 
+    JOIN clients 
+    on cars.client_id = clients.id
+    where dob <= 2000

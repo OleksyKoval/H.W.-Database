@@ -1,0 +1,10 @@
+select *
+from clients
+where id=(
+    select cars.client_id
+    from cars 
+        JOIN clients 
+        on cars.client_id = clients.id
+    ORDER BY year DESC
+    LIMIT 1
+)
